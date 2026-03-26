@@ -1,0 +1,404 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <header
+      class="anim-nav fixed w-full px-6 sm:px-6 lg:px-10 py-3 flex justify-between items-center z-[1000]"
+    >
+      <a href="#" class="block flex-shrink-0">
+        <img
+          src="./images/logo.png"
+          alt="Logo"
+          class="lg:w-24 w-22 object-cover transition-transform duration-300 ease-out hover:scale-105"
+        />
+      </a>
+
+      <nav class="hidden md:flex gap-4 items-center">
+        <div
+          class="flex gap-6 lg:gap-8 items-center px-6 lg:px-8 py-3 rounded-full bg-white/10 backdrop-blur-md border border-black/10 transition-all duration-300 hover:bg-white/20 hover:border-black/20"
+        >
+          <a
+            href="#"
+            class="text-[13px] font-medium text-black border-b border-black pb-[2px] transition-opacity duration-200"
+            >Home</a
+          >
+          <a
+            href="#"
+            class="text-[13px] text-black/60 hover:text-black transition-colors duration-200"
+            >About Us</a
+          >
+          <a
+            href="#"
+            class="text-[13px] text-black/60 hover:text-black transition-colors duration-200"
+            >Services</a
+          >
+          <a
+            href="#"
+            class="text-[13px] text-black/60 hover:text-black transition-colors duration-200"
+            >Vehicles</a
+          >
+          <a
+            href="#"
+            class="text-[13px] text-black/60 hover:text-black transition-colors duration-200"
+            >Contact Us</a
+          >
+        </div>
+        <a
+          href="#"
+          class="w-12 h-12 rounded-full flex items-center justify-center bg-white/10 backdrop-blur-md border border-black/10 transition-all duration-300 hover:scale-110 hover:rotate-12 hover:bg-white/25"
+        >
+          <img src="./images/call.png" alt="" class="w-4 opacity-75" />
+        </a>
+      </nav>
+
+      <div class="flex md:hidden items-center gap-2">
+        <a
+          href="#"
+          class="w-10 h-10 rounded-full flex items-center justify-center bg-white/10 backdrop-blur-md border border-black/10 transition-all duration-300 hover:bg-white/20"
+        >
+          <img src="./images/call.png" alt="" class="w-4 opacity-75" />
+        </a>
+
+        <button
+          id="menu-btn"
+          class="w-10 h-10 rounded-full flex flex-col items-center justify-center gap-[5px] bg-white/10 backdrop-blur-md border border-black/10 transition-all duration-300 hover:bg-white/20"
+          aria-label="Open menu"
+        >
+          <img class="w-5 opacity-75" src="./images/menu.png" alt="" />
+        </button>
+      </div>
+    </header>
+
+    <div
+      id="backdrop"
+      class="fixed inset-0 z-[1001] bg-black/40 backdrop-blur-[2px]"
+    ></div>
+
+    <aside
+      id="sidebar"
+      class="fixed top-0 right-0 h-full w-[85vw] max-w-[320px] z-[1002] bg-white/80 backdrop-blur-2xl border-l border-black/8 flex flex-col px-8 py-10 shadow-2xl"
+    >
+      <div class="flex items-center justify-between mb-12">
+        <button
+          id="close-btn"
+          class="w-9 h-9 rounded-full flex items-center justify-center bg-black/5 hover:bg-black/10 transition-colors duration-200"
+          aria-label="Close menu"
+        >
+          <img src="./images/close.png" class="w-3" alt="" />
+        </button>
+      </div>
+
+      <nav class="flex flex-col gap-1 flex-1">
+        <a
+          href="#"
+          class="flex items-center justify-between px-4 py-3.5 rounded-lg text-[14px] font-medium text-black bg-black/5 hover:bg-black/8 transition-colors duration-200 group"
+        >
+          Home
+        </a>
+        <a
+          href="#"
+          class="flex items-center justify-between px-4 py-3.5 rounded-lg text-[14px] font-medium text-black/60 hover:text-black hover:bg-black/5 transition-all duration-200 group"
+        >
+          About Us
+        </a>
+        <a
+          href="#"
+          class="flex items-center justify-between px-4 py-3.5 rounded-lg text-[14px] font-medium text-black/60 hover:text-black hover:bg-black/5 transition-all duration-200 group"
+        >
+          Services
+        </a>
+        <a
+          href="#"
+          class="flex items-center justify-between px-4 py-3.5 rounded-lg text-[14px] font-medium text-black/60 hover:text-black hover:bg-black/5 transition-all duration-200 group"
+        >
+          Vehicles
+        </a>
+        <a
+          href="#"
+          class="flex items-center justify-between px-4 py-3.5 rounded-lg text-[14px] font-medium text-black/60 hover:text-black hover:bg-black/5 transition-all duration-200 group"
+        >
+          Contact Us
+        </a>
+      </nav>
+
+      <a
+        href="#"
+        class="cta-btn flex items-center justify-center gap-2.5 bg-black text-white text-[11px] font-medium tracking-[0.08em] uppercase w-full py-4 rounded-lg mt-8 transition-all duration-300 hover:bg-black/80 active:scale-[0.97]"
+      >
+        <img src="./images/call.png" alt="" class="w-3.5 invert opacity-80" />
+        Call Us Now
+      </a>
+
+      <p
+        class="text-center text-[10px] tracking-widest text-black/70 font-medium uppercase mt-6"
+      >
+        Est. 2010 · 100,000+ Customers
+      </p>
+    </aside>
+    <section class="anim-hero p-2 sm:p-4">
+      <div
+        class="relative w-full h-[100svh] sm:h-[95vh] rounded-[14px] sm:rounded-[18px] overflow-hidden transition-transform duration-700 hover:scale-[1.012]"
+      >
+        <img
+          src="./images/hero.png"
+          alt=""
+          class="anim-ken w-full hidden lg:block h-full object-cover object-center"
+        />
+
+        <img
+          src="./images/hero-2.png"
+          class="anim-ken lg:hidden w-full h-full object-cover object-center"
+          alt=""
+        />
+
+        <div
+          class="absolute inset-0 z-10 bg-black/15 pointer-events-none"
+        ></div>
+
+        <div
+          class="absolute inset-x-0 bottom-0 h-[70%] sm:h-[65%] z-10 bg-gradient-to-t from-black/95 via-black/50 to-transparent pointer-events-none"
+        ></div>
+
+        <div
+          class="absolute inset-0 z-20 flex flex-col justify-between px-5 sm:px-8 lg:px-12 py-6 sm:py-10 pointer-events-none"
+        >
+          <div class="anim-tag flex items-start justify-between pt-14 sm:pt-16">
+            <div class="flex items-center gap-2.5">
+              <div class="w-[2px] h-7 sm:h-8 bg-black/50 rounded-full"></div>
+              <span
+                class="text-[10px] sm:text-[12px] tracking-[0.2em] text-black/90 uppercase font-medium"
+              >
+                Barko Group
+              </span>
+            </div>
+
+            <div class="hidden sm:flex items-center gap-5 lg:gap-8">
+              <div class="text-right">
+                <p
+                  class="text-xl lg:text-2xl font-bold text-black leading-none"
+                >
+                  500<span
+                    class="text-black/50 text-sm lg:text-base font-normal"
+                    >+</span
+                  >
+                </p>
+                <p
+                  class="text-[9px] lg:text-[10px] tracking-widest font-medium text-black/50 uppercase mt-1"
+                >
+                  Fleet Size
+                </p>
+              </div>
+              <div class="w-[1px] h-7 lg:h-8 bg-black/15"></div>
+              <div class="text-right">
+                <p
+                  class="text-xl lg:text-2xl font-bold text-black leading-none"
+                >
+                  50<span class="text-black/50 text-sm lg:text-base font-normal"
+                    >+</span
+                  >
+                </p>
+                <p
+                  class="text-[9px] lg:text-[10px] tracking-widest font-medium text-black/50 uppercase mt-1"
+                >
+                  Cities
+                </p>
+              </div>
+              <div class="w-[1px] h-7 lg:h-8 bg-black/15"></div>
+              <div class="text-right">
+                <p
+                  class="text-xl lg:text-2xl font-bold text-black leading-none"
+                >
+                  4.9<span
+                    class="text-black/50 text-sm lg:text-base font-normal"
+                    >/5</span
+                  >
+                </p>
+                <p
+                  class="text-[9px] lg:text-[10px] tracking-widest font-medium text-black/50 uppercase mt-1"
+                >
+                  Rating
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div class="flex sm:hidden items-center gap-5 mb-5">
+              <div>
+                <p class="text-lg font-bold text-white leading-none">
+                  500<span class="text-white/40 text-sm font-normal">+</span>
+                </p>
+                <p
+                  class="text-[9px] tracking-widest text-white/40 uppercase mt-0.5"
+                >
+                  Fleet
+                </p>
+              </div>
+              <div class="w-[1px] h-6 bg-white/20"></div>
+              <div>
+                <p class="text-lg font-bold text-white leading-none">
+                  50<span class="text-white/40 text-sm font-normal">+</span>
+                </p>
+                <p
+                  class="text-[9px] tracking-widest text-white/40 uppercase mt-0.5"
+                >
+                  Cities
+                </p>
+              </div>
+              <div class="w-[1px] h-6 bg-white/20"></div>
+              <div>
+                <p class="text-lg font-bold text-white leading-none">
+                  4.9<span class="text-white/40 text-sm font-normal">/5</span>
+                </p>
+                <p
+                  class="text-[9px] tracking-widest text-white/40 uppercase mt-0.5"
+                >
+                  Rating
+                </p>
+              </div>
+            </div>
+            <div class="flex flex-col gap-2 sm:gap-3">
+              <p
+                class="anim-line1 text-[10px] sm:text-[11px] tracking-[0.25em] text-white uppercase font-medium"
+              >
+                Est. 2010 · Trusted by 100,000+ customers
+              </p>
+              <h1
+                class="anim-line2 lg:text-[82px] text-[46px] font-black text-white leading-[0.95] tracking-[-0.03em]"
+              >
+                Drive<br />
+                <span class="text-white/30">Without</span><br />
+                Limits.
+              </h1>
+            </div>
+          </div>
+
+          <div class="anim-bottom pointer-events-auto">
+            <div class="flex items-end justify-between gap-3">
+              <div
+                class="hidden sm:flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/15 rounded-2xl p-1.5"
+              >
+                <div class="flex flex-col px-4 lg:px-5 py-2.5">
+                  <span
+                    class="text-[9px] tracking-[0.15em] text-white/40 uppercase mb-1"
+                    >Pick Up</span
+                  >
+                  <span class="text-[13px] text-white font-medium"
+                    >New Delhi</span
+                  >
+                </div>
+                <div class="w-[1px] h-8 bg-white/15"></div>
+                <div class="flex flex-col px-4 lg:px-5 py-2.5">
+                  <span
+                    class="text-[9px] tracking-[0.15em] text-white/40 uppercase mb-1"
+                    >Drop Off</span
+                  >
+                  <span class="text-[13px] text-white font-medium">Mumbai</span>
+                </div>
+                <div class="w-[1px] h-8 bg-white/15"></div>
+                <div class="flex flex-col px-4 lg:px-5 py-2.5">
+                  <span
+                    class="text-[9px] tracking-[0.15em] text-white/40 uppercase mb-1"
+                    >Date</span
+                  >
+                  <span class="text-[13px] text-white font-medium"
+                    >Apr 10, 2025</span
+                  >
+                </div>
+                <a
+                  href="#"
+                  class="ml-1 flex items-center gap-2 bg-white text-black text-[11px] font-bold tracking-[0.1em] uppercase px-5 lg:px-6 py-4 rounded-xl transition-all duration-300 hover:bg-white/90 hover:scale-[1.02]"
+                >
+                  Book Now
+                  <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+                    <path
+                      d="M1 6h10M6 1l5 5-5 5"
+                      stroke="black"
+                      stroke-width="1.6"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </a>
+              </div>
+              <div
+                class="flex sm:hidden flex-col w-full bg-white/10 backdrop-blur-md border border-white/15 rounded-2xl p-3 gap-3"
+              >
+                <div class="flex items-stretch">
+                  <div class="flex flex-col flex-1 px-3 py-2">
+                    <span
+                      class="text-[9px] tracking-[0.15em] text-white/40 uppercase mb-1"
+                      >Pick Up</span
+                    >
+                    <span class="text-[13px] text-white font-medium"
+                      >New Delhi</span
+                    >
+                  </div>
+                  <div class="w-[1px] bg-white/15 self-stretch mx-0.5"></div>
+                  <div class="flex flex-col flex-1 px-3 py-2">
+                    <span
+                      class="text-[9px] tracking-[0.15em] text-white/40 uppercase mb-1"
+                      >Drop Off</span
+                    >
+                    <span class="text-[13px] text-white font-medium"
+                      >Mumbai</span
+                    >
+                  </div>
+                  <div class="w-[1px] bg-white/15 self-stretch mx-0.5"></div>
+                  <div class="flex flex-col flex-1 px-3 py-2">
+                    <span
+                      class="text-[9px] tracking-[0.15em] text-white/40 uppercase mb-1"
+                      >Date</span
+                    >
+                    <span class="text-[13px] text-white font-medium"
+                      >Apr 10</span
+                    >
+                  </div>
+                </div>
+                <a
+                  href="#"
+                  class="flex items-center justify-center gap-2 bg-white text-black text-[12px] font-bold tracking-[0.1em] uppercase w-full py-4 rounded-xl active:scale-[0.98] transition-transform duration-150"
+                >
+                  Book Now
+                  <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+                    <path
+                      d="M1 6h10M6 1l5 5-5 5"
+                      stroke="black"
+                      stroke-width="1.6"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </a>
+              </div>
+
+              <div
+                class="hidden sm:flex flex-col items-center gap-2 pb-1 flex-shrink-0"
+              >
+                <div
+                  class="w-[1px] h-10 bg-white/20 rounded-full overflow-hidden"
+                >
+                  <div
+                    class="w-full h-2/5 bg-white/70 rounded-full animate-bounce"
+                  ></div>
+                </div>
+                <span
+                  class="text-[9px] tracking-[0.2em] text-white/35 uppercase"
+                  >Scroll</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="./js/script.js"></script>
+  </body>
+</html>

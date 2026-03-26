@@ -1,0 +1,218 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap");
+
+* {
+  font-family: "Lexend", sans-serif;
+  box-sizing: border-box;
+}
+
+@keyframes navSlideDown {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes heroFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+@keyframes kenBurns {
+  from {
+    transform: scale(1.04);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.anim-nav {
+  animation: navSlideDown 0.7s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+.anim-hero {
+  animation: heroFadeUp 1s cubic-bezier(0.16, 1, 0.3, 1) 0.3s both;
+}
+.anim-ken {
+  animation: kenBurns 1.8s cubic-bezier(0.16, 1, 0.3, 1) 0.3s both;
+}
+.anim-tag {
+  animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 1s both;
+}
+.anim-line1 {
+  animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 1.1s both;
+}
+.anim-line2 {
+  animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 1.25s both;
+}
+.anim-bottom {
+  animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 1.4s both;
+}
+
+@keyframes navSlideDown {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.anim-nav {
+  animation: navSlideDown 0.7s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+/* Sidebar transition */
+#sidebar {
+  transform: translateX(100%);
+  transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+}
+#sidebar.open {
+  transform: translateX(0);
+}
+
+/* Backdrop */
+#backdrop {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.35s ease;
+}
+#backdrop.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Hamburger bars */
+.bar {
+  display: block;
+  width: 20px;
+  height: 1.5px;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 99px;
+  transition:
+    transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+    opacity 0.2s ease;
+  transform-origin: center;
+}
+.menu-open #bar1 {
+  transform: translateY(6px) rotate(45deg);
+}
+.menu-open #bar2 {
+  opacity: 0;
+  transform: scaleX(0);
+}
+.menu-open #bar3 {
+  transform: translateY(-6px) rotate(-45deg);
+}
+
+/* Sidebar nav links stagger */
+#sidebar a {
+  opacity: 0;
+  transform: translateX(24px);
+  transition:
+    opacity 0.35s ease,
+    transform 0.35s ease,
+    color 0.2s ease;
+}
+#sidebar.open a:nth-child(1) {
+  opacity: 1;
+  transform: translateX(0);
+  transition-delay: 0.1s;
+}
+#sidebar.open a:nth-child(2) {
+  opacity: 1;
+  transform: translateX(0);
+  transition-delay: 0.16s;
+}
+#sidebar.open a:nth-child(3) {
+  opacity: 1;
+  transform: translateX(0);
+  transition-delay: 0.22s;
+}
+#sidebar.open a:nth-child(4) {
+  opacity: 1;
+  transform: translateX(0);
+  transition-delay: 0.28s;
+}
+#sidebar.open a:nth-child(5) {
+  opacity: 1;
+  transform: translateX(0);
+  transition-delay: 0.34s;
+}
+
+#sidebar .cta-btn {
+  opacity: 0;
+  transform: translateY(12px);
+  transition:
+    opacity 0.35s ease 0.42s,
+    transform 0.35s ease 0.42s;
+}
+#sidebar.open .cta-btn {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@keyframes heroFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+@keyframes kenBurns {
+  from {
+    transform: scale(1.06);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.anim-hero {
+  animation: heroFadeUp 1s cubic-bezier(0.16, 1, 0.3, 1) 0.3s both;
+}
+.anim-ken {
+  animation: kenBurns 1.8s cubic-bezier(0.16, 1, 0.3, 1) 0.3s both;
+}
+.anim-tag {
+  animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 1s both;
+}
+.anim-line1 {
+  animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 1.1s both;
+}
+.anim-line2 {
+  animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 1.25s both;
+}
+.anim-bottom {
+  animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 1.4s both;
+}
